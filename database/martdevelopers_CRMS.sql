@@ -28,15 +28,15 @@ SET time_zone = "+00:00";
 -- Table structure for table `crms_admin`
 --
 
-CREATE TABLE `crms_admin` (
-  `a_id` int(20) NOT NULL,
-  `a_number` varchar(200) NOT NULL,
-  `a_name` varchar(200) NOT NULL,
-  `a_email` varchar(200) NOT NULL,
-  `a_pwd` varchar(200) NOT NULL,
-  `a_dpic` varchar(200) NOT NULL,
-  `a_bio` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- CREATE TABLE `crms_admin` (
+--   `a_id` int(20) NOT NULL,
+--   `a_number` varchar(200) NOT NULL,
+--   `a_name` varchar(200) NOT NULL,
+--   `a_email` varchar(200) NOT NULL,
+--   `a_pwd` varchar(200) NOT NULL,
+--   `a_dpic` varchar(200) NOT NULL,
+--   `a_bio` longtext NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `crms_admin`
@@ -51,27 +51,27 @@ INSERT INTO `crms_admin` (`a_id`, `a_number`, `a_name`, `a_email`, `a_pwd`, `a_d
 -- Table structure for table `crms_bookings`
 --
 
-CREATE TABLE `crms_bookings` (
-  `b_id` int(20) NOT NULL,
-  `b_date` timestamp(4) NOT NULL DEFAULT CURRENT_TIMESTAMP(4) ON UPDATE CURRENT_TIMESTAMP(4),
-  `b_status` varchar(200) NOT NULL DEFAULT 'Pending',
-  `c_id` varchar(200) NOT NULL,
-  `a_id` varchar(200) NOT NULL,
-  `cc_id` varchar(200) NOT NULL,
-  `s_id` varchar(200) NOT NULL,
-  `car_id` varchar(200) NOT NULL,
-  `car_name` varchar(200) NOT NULL,
-  `car_type` varchar(200) NOT NULL,
-  `car_regno` varchar(200) NOT NULL,
-  `b_duration` varchar(200) NOT NULL,
-  `car_price` varchar(200) NOT NULL,
-  `c_name` varchar(200) NOT NULL,
-  `c_natidno` varchar(200) NOT NULL,
-  `c_phone` varchar(200) NOT NULL,
-  `b_number` varchar(200) NOT NULL,
-  `b_payment` varchar(200) NOT NULL,
-  `b_car_return_status` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- CREATE TABLE `crms_bookings` (
+--   `b_id` int(20) NOT NULL,
+--   `b_date` timestamp(4) NOT NULL DEFAULT CURRENT_TIMESTAMP(4) ON UPDATE CURRENT_TIMESTAMP(4),
+--   `b_status` varchar(200) NOT NULL DEFAULT 'Pending',
+--   `c_id` varchar(200) NOT NULL,
+--   `a_id` varchar(200) NOT NULL,
+--   `cc_id` varchar(200) NOT NULL,
+--   `s_id` varchar(200) NOT NULL,
+--   `car_id` varchar(200) NOT NULL,
+--   `car_name` varchar(200) NOT NULL,
+--   `car_type` varchar(200) NOT NULL,
+--   `car_regno` varchar(200) NOT NULL,
+--   `b_duration` varchar(200) NOT NULL,
+--   `car_price` varchar(200) NOT NULL,
+--   `c_name` varchar(200) NOT NULL,
+--   `c_natidno` varchar(200) NOT NULL,
+--   `c_phone` varchar(200) NOT NULL,
+--   `b_number` varchar(200) NOT NULL,
+--   `b_payment` varchar(200) NOT NULL,
+--   `b_car_return_status` varchar(200) NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `crms_bookings`
@@ -86,20 +86,20 @@ INSERT INTO `crms_bookings` (`b_id`, `b_date`, `b_status`, `c_id`, `a_id`, `cc_i
 -- Table structure for table `crms_cars`
 --
 
-CREATE TABLE `crms_cars` (
-  `car_id` int(20) NOT NULL,
-  `car_cat_id` varchar(200) NOT NULL,
-  `car_regno` varchar(200) NOT NULL,
-  `car_name` varchar(200) NOT NULL,
-  `car_type` varchar(200) NOT NULL,
-  `car_price` varchar(200) NOT NULL,
-  `car_features` longtext NOT NULL,
-  `exterior_img` varchar(200) NOT NULL,
-  `interior_img` varchar(200) NOT NULL,
-  `rear_img` varchar(200) NOT NULL,
-  `front_img` varchar(200) NOT NULL,
-  `car_status` varchar(200) NOT NULL DEFAULT 'Available'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- CREATE TABLE `crms_cars` (
+--   `car_id` int(20) NOT NULL,
+--   `car_cat_id` varchar(200) NOT NULL,
+--   `car_regno` varchar(200) NOT NULL,
+--   `car_name` varchar(200) NOT NULL,
+--   `car_type` varchar(200) NOT NULL,
+--   `car_price` varchar(200) NOT NULL,
+--   `car_features` longtext NOT NULL,
+--   `exterior_img` varchar(200) NOT NULL,
+--   `interior_img` varchar(200) NOT NULL,
+--   `rear_img` varchar(200) NOT NULL,
+--   `front_img` varchar(200) NOT NULL,
+--   `car_status` varchar(200) NOT NULL DEFAULT 'Available'
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `crms_cars`
@@ -120,11 +120,11 @@ INSERT INTO `crms_cars` (`car_id`, `car_cat_id`, `car_regno`, `car_name`, `car_t
 -- Table structure for table `crms_car_categories`
 --
 
-CREATE TABLE `crms_car_categories` (
-  `car_cat_id` int(20) NOT NULL,
-  `car_cat_name` varchar(200) NOT NULL,
-  `car_cat_desc` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- CREATE TABLE `crms_car_categories` (
+--   `car_cat_id` int(20) NOT NULL,
+--   `car_cat_name` varchar(200) NOT NULL,
+--   `car_cat_desc` longtext NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `crms_car_categories`
@@ -145,24 +145,24 @@ INSERT INTO `crms_car_categories` (`car_cat_id`, `car_cat_name`, `car_cat_desc`)
 -- Table structure for table `crms_car_payments`
 --
 
-CREATE TABLE `crms_car_payments` (
-  `p_id` int(20) NOT NULL,
-  `c_name` varchar(200) NOT NULL,
-  `b_duration` varchar(200) NOT NULL,
-  `p_amt` varchar(200) NOT NULL,
-  `car_id` varchar(200) NOT NULL,
-  `car_cat_id` varchar(200) NOT NULL,
-  `car_regno` varchar(200) NOT NULL,
-  `car_type` varchar(200) NOT NULL,
-  `car_name` varchar(200) NOT NULL,
-  `c_id` varchar(200) NOT NULL,
-  `a_id` varchar(200) NOT NULL,
-  `c_natidno` varchar(200) NOT NULL,
-  `p_code` varchar(200) NOT NULL,
-  `p_method` varchar(200) NOT NULL,
-  `p_ref_number` varchar(200) NOT NULL,
-  `p_date` timestamp(4) NOT NULL DEFAULT CURRENT_TIMESTAMP(4) ON UPDATE CURRENT_TIMESTAMP(4)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- CREATE TABLE `crms_car_payments` (
+--   `p_id` int(20) NOT NULL,
+--   `c_name` varchar(200) NOT NULL,
+--   `b_duration` varchar(200) NOT NULL,
+--   `p_amt` varchar(200) NOT NULL,
+--   `car_id` varchar(200) NOT NULL,
+--   `car_cat_id` varchar(200) NOT NULL,
+--   `car_regno` varchar(200) NOT NULL,
+--   `car_type` varchar(200) NOT NULL,
+--   `car_name` varchar(200) NOT NULL,
+--   `c_id` varchar(200) NOT NULL,
+--   `a_id` varchar(200) NOT NULL,
+--   `c_natidno` varchar(200) NOT NULL,
+--   `p_code` varchar(200) NOT NULL,
+--   `p_method` varchar(200) NOT NULL,
+--   `p_ref_number` varchar(200) NOT NULL,
+--   `p_date` timestamp(4) NOT NULL DEFAULT CURRENT_TIMESTAMP(4) ON UPDATE CURRENT_TIMESTAMP(4)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `crms_car_payments`
@@ -178,19 +178,19 @@ INSERT INTO `crms_car_payments` (`p_id`, `c_name`, `b_duration`, `p_amt`, `car_i
 -- Table structure for table `crms_clients`
 --
 
-CREATE TABLE `crms_clients` (
-  `c_id` int(20) NOT NULL,
-  `c_name` varchar(200) NOT NULL,
-  `c_natidno` varchar(200) NOT NULL,
-  `c_phone` varchar(200) NOT NULL,
-  `c_dob` varchar(200) NOT NULL,
-  `c_adr` varchar(200) NOT NULL,
-  `c_email` varchar(200) NOT NULL,
-  `c_pwd` varchar(200) NOT NULL,
-  `c_dpic` varchar(200) NOT NULL,
-  `c_number` varchar(200) NOT NULL,
-  `c_bio` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- CREATE TABLE `crms_clients` (
+--   `c_id` int(20) NOT NULL,
+--   `c_name` varchar(200) NOT NULL,
+--   `c_natidno` varchar(200) NOT NULL,
+--   `c_phone` varchar(200) NOT NULL,
+--   `c_dob` varchar(200) NOT NULL,
+--   `c_adr` varchar(200) NOT NULL,
+--   `c_email` varchar(200) NOT NULL,
+--   `c_pwd` varchar(200) NOT NULL,
+--   `c_dpic` varchar(200) NOT NULL,
+--   `c_number` varchar(200) NOT NULL,
+--   `c_bio` longtext NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `crms_clients`
@@ -207,13 +207,13 @@ INSERT INTO `crms_clients` (`c_id`, `c_name`, `c_natidno`, `c_phone`, `c_dob`, `
 -- Table structure for table `crms_feedbacks`
 --
 
-CREATE TABLE `crms_feedbacks` (
-  `f_id` int(20) NOT NULL,
-  `user_name` varchar(200) NOT NULL,
-  `user_number` varchar(200) NOT NULL,
-  `feedback` longtext NOT NULL,
-  `f_status` varchar(200) NOT NULL DEFAULT 'Pending'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- CREATE TABLE `crms_feedbacks` (
+--   `f_id` int(20) NOT NULL,
+--   `user_name` varchar(200) NOT NULL,
+--   `user_number` varchar(200) NOT NULL,
+--   `feedback` longtext NOT NULL,
+--   `f_status` varchar(200) NOT NULL DEFAULT 'Pending'
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -221,11 +221,11 @@ CREATE TABLE `crms_feedbacks` (
 -- Table structure for table `crms_pwd_resets`
 --
 
-CREATE TABLE `crms_pwd_resets` (
-  `id` int(20) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `token` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- CREATE TABLE `crms_pwd_resets` (
+--   `id` int(20) NOT NULL,
+--   `email` varchar(200) NOT NULL,
+--   `token` longtext NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `crms_pwd_resets`
@@ -240,18 +240,18 @@ INSERT INTO `crms_pwd_resets` (`id`, `email`, `token`) VALUES
 -- Table structure for table `crms_staff`
 --
 
-CREATE TABLE `crms_staff` (
-  `s_id` int(20) NOT NULL,
-  `s_name` varchar(200) NOT NULL,
-  `s_natidno` varchar(200) NOT NULL,
-  `s_phone` varchar(200) NOT NULL,
-  `s_adr` varchar(200) NOT NULL,
-  `s_no` varchar(200) NOT NULL,
-  `s_email` varchar(200) NOT NULL,
-  `s_pwd` varchar(200) NOT NULL,
-  `s_dpic` varchar(200) NOT NULL,
-  `s_bio` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- CREATE TABLE `crms_staff` (
+--   `s_id` int(20) NOT NULL,
+--   `s_name` varchar(200) NOT NULL,
+--   `s_natidno` varchar(200) NOT NULL,
+--   `s_phone` varchar(200) NOT NULL,
+--   `s_adr` varchar(200) NOT NULL,
+--   `s_no` varchar(200) NOT NULL,
+--   `s_email` varchar(200) NOT NULL,
+--   `s_pwd` varchar(200) NOT NULL,
+--   `s_dpic` varchar(200) NOT NULL,
+--   `s_bio` longtext NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `crms_staff`
@@ -269,114 +269,114 @@ INSERT INTO `crms_staff` (`s_id`, `s_name`, `s_natidno`, `s_phone`, `s_adr`, `s_
 --
 -- Indexes for table `crms_admin`
 --
-ALTER TABLE `crms_admin`
-  ADD PRIMARY KEY (`a_id`);
-
+-- ALTER TABLE `crms_admin`
+--   ADD PRIMARY KEY (`a_id`);
 --
--- Indexes for table `crms_bookings`
+-- --
+-- -- Indexes for table `crms_bookings`
+-- --
+-- ALTER TABLE `crms_bookings`
+--   ADD PRIMARY KEY (`b_id`);
 --
-ALTER TABLE `crms_bookings`
-  ADD PRIMARY KEY (`b_id`);
-
+-- --
+-- -- Indexes for table `crms_cars`
+-- --
+-- ALTER TABLE `crms_cars`
+--   ADD PRIMARY KEY (`car_id`);
 --
--- Indexes for table `crms_cars`
+-- --
+-- -- Indexes for table `crms_car_categories`
+-- --
+-- ALTER TABLE `crms_car_categories`
+--   ADD PRIMARY KEY (`car_cat_id`);
 --
-ALTER TABLE `crms_cars`
-  ADD PRIMARY KEY (`car_id`);
-
+-- --
+-- -- Indexes for table `crms_car_payments`
+-- --
+-- ALTER TABLE `crms_car_payments`
+--   ADD PRIMARY KEY (`p_id`);
 --
--- Indexes for table `crms_car_categories`
+-- --
+-- -- Indexes for table `crms_clients`
+-- --
+-- ALTER TABLE `crms_clients`
+--   ADD PRIMARY KEY (`c_id`);
 --
-ALTER TABLE `crms_car_categories`
-  ADD PRIMARY KEY (`car_cat_id`);
-
+-- --
+-- -- Indexes for table `crms_feedbacks`
+-- --
+-- ALTER TABLE `crms_feedbacks`
+--   ADD PRIMARY KEY (`f_id`);
 --
--- Indexes for table `crms_car_payments`
+-- --
+-- -- Indexes for table `crms_pwd_resets`
+-- --
+-- ALTER TABLE `crms_pwd_resets`
+--   ADD PRIMARY KEY (`id`);
 --
-ALTER TABLE `crms_car_payments`
-  ADD PRIMARY KEY (`p_id`);
-
+-- --
+-- -- Indexes for table `crms_staff`
+-- --
+-- ALTER TABLE `crms_staff`
+--   ADD PRIMARY KEY (`s_id`);
 --
--- Indexes for table `crms_clients`
+-- --
+-- -- AUTO_INCREMENT for dumped tables
+-- --
 --
-ALTER TABLE `crms_clients`
-  ADD PRIMARY KEY (`c_id`);
-
+-- --
+-- -- AUTO_INCREMENT for table `crms_admin`
+-- --
+-- ALTER TABLE `crms_admin`
+--   MODIFY `a_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- Indexes for table `crms_feedbacks`
+-- --
+-- -- AUTO_INCREMENT for table `crms_bookings`
+-- --
+-- ALTER TABLE `crms_bookings`
+--   MODIFY `b_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
-ALTER TABLE `crms_feedbacks`
-  ADD PRIMARY KEY (`f_id`);
-
+-- --
+-- -- AUTO_INCREMENT for table `crms_cars`
+-- --
+-- ALTER TABLE `crms_cars`
+--   MODIFY `car_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
--- Indexes for table `crms_pwd_resets`
+-- --
+-- -- AUTO_INCREMENT for table `crms_car_categories`
+-- --
+-- ALTER TABLE `crms_car_categories`
+--   MODIFY `car_cat_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
-ALTER TABLE `crms_pwd_resets`
-  ADD PRIMARY KEY (`id`);
-
+-- --
+-- -- AUTO_INCREMENT for table `crms_car_payments`
+-- --
+-- ALTER TABLE `crms_car_payments`
+--   MODIFY `p_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
--- Indexes for table `crms_staff`
+-- --
+-- -- AUTO_INCREMENT for table `crms_clients`
+-- --
+-- ALTER TABLE `crms_clients`
+--   MODIFY `c_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
-ALTER TABLE `crms_staff`
-  ADD PRIMARY KEY (`s_id`);
-
+-- --
+-- -- AUTO_INCREMENT for table `crms_feedbacks`
+-- --
+-- ALTER TABLE `crms_feedbacks`
+--   MODIFY `f_id` int(20) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for dumped tables
+-- --
+-- -- AUTO_INCREMENT for table `crms_pwd_resets`
+-- --
+-- ALTER TABLE `crms_pwd_resets`
+--   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
-
---
--- AUTO_INCREMENT for table `crms_admin`
---
-ALTER TABLE `crms_admin`
-  MODIFY `a_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `crms_bookings`
---
-ALTER TABLE `crms_bookings`
-  MODIFY `b_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT for table `crms_cars`
---
-ALTER TABLE `crms_cars`
-  MODIFY `car_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `crms_car_categories`
---
-ALTER TABLE `crms_car_categories`
-  MODIFY `car_cat_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `crms_car_payments`
---
-ALTER TABLE `crms_car_payments`
-  MODIFY `p_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `crms_clients`
---
-ALTER TABLE `crms_clients`
-  MODIFY `c_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `crms_feedbacks`
---
-ALTER TABLE `crms_feedbacks`
-  MODIFY `f_id` int(20) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `crms_pwd_resets`
---
-ALTER TABLE `crms_pwd_resets`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `crms_staff`
---
-ALTER TABLE `crms_staff`
-  MODIFY `s_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+-- --
+-- -- AUTO_INCREMENT for table `crms_staff`
+-- --
+-- ALTER TABLE `crms_staff`
+--   MODIFY `s_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
