@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/cabodash-dev/CarRentalMS/blob/master/public/img/logo.png" width="400"></p>
+<p align="center"><img src="https://github.com/cabodash-dev/CarRentalMS/blob/main/public/img/logo.png" width="400"></p>
 
 
 
@@ -14,11 +14,11 @@ LaraCarRentalsAgecy is a web application crafted using laravel framework and cor
 
 ## A glance of the system
 
-<p align="center"><img src="https://github.com/cabodash-dev/CarRentalMS/blob/master/public/screenshots/1.png"></p>
-<p align="center"><img src="https://github.com/cabodash-dev/CarRentalMS/blob/master/public/screenshots/2.png"></p>
-<p align="center"><img src="https://github.com/cabodash-dev/CarRentalMS/blob/master/public/screenshots/3.png"></p>
-<p align="center"><img src="https://github.com/cabodash-dev/CarRentalMS/blob/master/public/screenshots/4.png"></p>
-<p align="center"><img src="https://github.com/cabodash-dev/CarRentalMS/blob/master/public/screenshots/5.png"></p>
+<p align="center"><img src="https://github.com/cabodash-dev/CarRentalMS/blob/main/public/screenshots/1.png"></p>
+<p align="center"><img src="https://github.com/cabodash-dev/CarRentalMS/blob/main/public/screenshots/2.png"></p>
+<p align="center"><img src="https://github.com/cabodash-dev/CarRentalMS/blob/main/public/screenshots/3.png"></p>
+<p align="center"><img src="https://github.com/cabodash-dev/CarRentalMS/blob/main/public/screenshots/4.png"></p>
+<p align="center"><img src="https://github.com/cabodash-dev/CarRentalMS/blob/main/public/screenshots/5.png"></p>
 
 
 ## How to unleash this beast.
