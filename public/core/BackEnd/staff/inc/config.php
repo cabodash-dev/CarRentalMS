@@ -1,7 +1,7 @@
 <?php
-$dbuser="root";
-$dbpass="";
+$dbuser="nitram92bcs";
+$dbpass="P455w0rd!";
 $host="localhost";
-$db="martdevelopers_CRMS";
+$db="jracdb";
 $mysqli=new mysqli($host,$dbuser, $dbpass, $db);
 ?>

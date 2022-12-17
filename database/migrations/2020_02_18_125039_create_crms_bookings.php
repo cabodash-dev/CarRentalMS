@@ -31,6 +31,7 @@ class CreateCrmsBookings extends Migration
             $table->string('c_natidno');
             $table->string('c_phone');
             $table->string('b_number');
+            $table->string('b_payment');
             $table->string('b_car_return_status');
             //$table->timestamps();
         });

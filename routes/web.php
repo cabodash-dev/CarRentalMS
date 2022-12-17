@@ -14,15 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('home');
 });
 
-
-Route::get('/features', function () {
-    return view('features');
-});
-
-
-Route::get('/contact', function () {
-    return view('contact');
+Route::group(['prefix'=>'admin'],function(){
+    Route::get('/', function () {
+        return view('deprecated.index');
+    });
+}
+);
+Route::group(['prefix'=>'/deprecated'],function(){
+    Route::get('/', function () {
+        return view('deprecated.index');
+    });
+    Route::get('/features', function () {
+        return view('deprecated.features');
+    });
+    Route::get('/contact', function () {
+        return view('deprecated.contact');
+    });
 });

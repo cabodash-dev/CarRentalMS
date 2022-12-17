@@ -22,6 +22,7 @@ class CreateCrmsClients extends Migration
             $table->string('c_adr');
             $table->string('c_email');
             $table->string('c_pwd');
+            $table->string('c_dpic');
             $table->string('c_number');
             $table->longText('c_bio');
             //$table->timestamps();
