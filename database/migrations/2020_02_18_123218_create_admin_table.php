@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePwdResets extends Migration
+class CreateAdminTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,15 @@ class CreatePwdResets extends Migration
      */
     public function up()
     {
-        /*
-         * -- CREATE TABLE `crms_pwd_resets` (
---   `id` int(20) NOT NULL,
---   `email` varchar(200) NOT NULL,
---   `token` longtext NOT NULL
--- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;*/
-        Schema::create('crms_pwd_resets', function (Blueprint $table) {
+        Schema::create('admin', function (Blueprint $table) {
             $table->bigIncrements('id')->unique();
+            $table->string('name');
             $table->string('email');
-            $table->longText('token');
+            $table->string('password');
+            $table->rememberToken();
+            $table->string('number');
+            $table->string('profile_img_path');
+            $table->longText('bio');
             $table->timestamps();
         });
     }
@@ -34,6 +33,6 @@ class CreatePwdResets extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('crms_pwd_resets');
+        Schema::dropIfExists('admin');
     }
 }

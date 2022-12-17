@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCrmsFeedbacks extends Migration
+class CreateFeedbacksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateCrmsFeedbacks extends Migration
      */
     public function up()
     {
-        Schema::create('crms_feedbacks', function (Blueprint $table) {
-            $table->bigIncrements('f_id')->unique();
-            $table->string('user_name');
-            $table->string('user_number');
+        Schema::create('feedbacks', function (Blueprint $table) {
+            $table->bigIncrements('id')->unique();
+            $table->string('client_id');
+            $table->string('number');
             $table->longText('feedback');
-            $table->string('f_status');
+            $table->enum('status',['pending','published','no_feedback']);
             $table->timestamps();
         });
     }

@@ -17,20 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=>'admin'],function(){
-    Route::get('/', function () {
-        return view('deprecated.index');
-    });
-}
-);
-Route::group(['prefix'=>'/deprecated'],function(){
-    Route::get('/', function () {
-        return view('deprecated.index');
-    });
-    Route::get('/features', function () {
-        return view('deprecated.features');
-    });
-    Route::get('/contact', function () {
-        return view('deprecated.contact');
-    });
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
