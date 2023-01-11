@@ -19,7 +19,7 @@ class CreatePwdResets extends Migration
 --   `email` varchar(200) NOT NULL,
 --   `token` longtext NOT NULL
 -- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;*/
-        Schema::create('crms_pwd_resets', function (Blueprint $table) {
+        Schema::create('pwd_resets', function (Blueprint $table) {
             $table->bigIncrements('id')->unique();
             $table->string('email');
             $table->longText('token');
@@ -34,6 +34,6 @@ class CreatePwdResets extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('crms_pwd_resets');
+        Schema::dropIfExists('pwd_resets');
     }
 }

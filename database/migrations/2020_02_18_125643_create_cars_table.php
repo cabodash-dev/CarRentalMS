@@ -21,7 +21,7 @@ class CreateCarsTable extends Migration
             $table->string('type');
             $table->string('model');
             $table->string('year');
-            $table->string('serie');
+            $table->string('series');
             $table->integer('fuel_tank_capacity')->default(0);
             $table->longText('features');
             $table->string('exterior_img');

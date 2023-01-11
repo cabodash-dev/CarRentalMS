@@ -16,7 +16,7 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->bigIncrements('id')->unique();
-            $table->string('booking_id');
+            $table->bigInteger('booking_id');
             $table->decimal('amount')->default(0);
             $table->decimal('extras')->default(0);
             $table->decimal('discount',4,4)->default(0);

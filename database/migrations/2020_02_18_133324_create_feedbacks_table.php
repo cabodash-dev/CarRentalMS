@@ -15,7 +15,7 @@ class CreateFeedbacksTable extends Migration
     {
         Schema::create('feedbacks', function (Blueprint $table) {
             $table->bigIncrements('id')->unique();
-            $table->string('client_id');
+            $table->bigInteger('client_id');
             $table->string('number');
             $table->longText('feedback');
             $table->enum('status',['pending','published','no_feedback']);
@@ -30,6 +30,6 @@ class CreateFeedbacksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('crms_feedbacks');
+        Schema::dropIfExists('feedbacks');
     }
 }

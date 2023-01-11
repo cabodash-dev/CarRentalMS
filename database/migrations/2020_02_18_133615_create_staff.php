@@ -13,8 +13,20 @@ class CreateStaff extends Migration
      */
     public function up()
     {
-        Schema::create('crms_staff', function (Blueprint $table) {
-            $table->bigIncrements('s_id')->unique();
+        Schema::create('staff', function (Blueprint $table) {
+            $table->bigIncrements('id')->unique();
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('national_id_number');
+            $table->string('phone');
+            $table->string('date_of_birth');
+            $table->longText('address');
+            $table->string('email');
+            $table->string('password');
+            $table->rememberToken();
+            $table->string('number');
+            $table->string('profile_img_path');
+            $table->longText('bio');
             $table->string('s_name');
             $table->string('s_natidno');
             $table->string('s_phone');
@@ -35,6 +47,6 @@ class CreateStaff extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('crms_staff');
+        Schema::dropIfExists('staff');
     }
 }
